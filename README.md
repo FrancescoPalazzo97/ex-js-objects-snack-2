@@ -140,7 +140,15 @@ console.log(secondBurger.maker.restaurant.name); // ?
 ```
 
 * Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
+
+1. "Chef Hyur" per il primo console.log
+2. "Chef Hyur" anche per il secondo
+3. "Hyur's II" per il terzo
+4. "Hyur's II" anche per il quarto
+
 * Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+
+5 oggetti in totale
 
 ## 🎯 Code Question 6 (Bonus)
 
@@ -169,6 +177,20 @@ const chef = {
 ```
 
 * Qual è il metodo migliore per clonare l'oggetto chef, e perché?
+
+Il modo migliore è il seguente:
+```javascript
+const chefCopy = {
+    ...chef,
+    restaurant: {
+        chef.restaurant,
+        address: {
+            chef.restaurant.address
+        }
+    }
+}
+```
+
 
 ## 🎯 Snack (Bonus)
 
