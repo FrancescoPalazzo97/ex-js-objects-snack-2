@@ -102,7 +102,12 @@ const restaurant = {
 ```
 
 * Qual è il metodo migliore per clonare l'oggetto chef, e perché?
+
+Il miglior modo di clonare chef è usando lo spread operator con il qualte posso clonare anche la funzione presente all'interno
+
 * Qual è il metodo migliore per clonare l'oggetto restaurant, e perché?
+
+Per restaurant il miglior modo è stucturedClone() che permette di clonare anche gli oggetti annidati e anche Date
 
 ## 🎯 Code Question 5 (Bonus)
 
@@ -120,18 +125,14 @@ const hamburger = {
         age: 29
     }
 };
-```
 
-```javascript
 const newRestaurant = {...hamburger.maker.restaurant};
 newRestaurant.name = "Hyur's II";
 newRestaurant.address = "Second Street, 12";
 const secondBurger = {...hamburger};
 secondBurger.maker.restaurant = newRestaurant;
 secondBurger.maker.name = "Chef Hyur";
-```
 
-```javascript
 console.log(hamburger.maker.name); // ?
 console.log(secondBurger.maker.name); // ?
 console.log(hamburger.maker.restaurant.name); // ?
