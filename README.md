@@ -5,22 +5,24 @@
 ## 🏆 Code Question 1
 
 ```javascript
-const hamburger = { 
-	name: "Cheese Burger", 
-	weight: 250,
-	ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
-};
+const hamburger = { name: "Cheese Burger", weight: 250 };
+const secondBurger = hamburger;
+secondBurger.name = 'Double Cheese Burger';
+secondBurger.weight = 500;
 
-const secondBurger = {...hamburger};
-secondBurger.ingredients[0] = "Salad";
-
-console.log(hamburger.ingredients[0]); // ?
-console.log(secondBurger.ingredients[0]); // ?
+console.log(hamburger.name); // ?
+console.log(secondBurger.name ); // ?
 ```
 
 * Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
+
+In console verrà stampato 'Double Cheese Burger' per entrambi i console.log
+
 * Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
 
+È stato creato un oggetto
+
+---
 
 ## 🏆 Code Question 2
 
@@ -30,14 +32,10 @@ const hamburger = {
     weight: 250,
     ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
 };
-```
 
-```javascript
 const secondBurger = {...hamburger};
 secondBurger.ingredients[0] = "Salad";
-```
 
-```javascript
 console.log(hamburger.ingredients[0]); // ?
 console.log(secondBurger.ingredients[0]); // ?
 ```
@@ -45,7 +43,14 @@ console.log(secondBurger.ingredients[0]); // ?
 **P.S.:** Ricordati che gli Array, come gli oggetti, sono dei Reference Type (Tipi di Riferimento)!
 
 * Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
+
+In console verrà stampato "Salad" per entrambi i console.log
+
 * Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+
+Sono stati creati 2 oggetti
+
+---
 
 ## 🏆 Code Question 3
 
@@ -63,14 +68,16 @@ const hamburger = {
         age: 29
     }
 };
-```
 
-```javascript
 const secondBurger = structuredClone(hamburger);
 const thirdBurger = structuredClone(hamburger);
 ```
 
 * Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+
+9 oggetti
+
+---
 
 ## 🏆 Code Question 4
 
@@ -82,9 +89,7 @@ const chef = {
         console.log(`Ecco ${num} hamburger per te!`);
     },
 }
-```
 
-```javascript
 const restaurant = {
     name: "Hyur's Burgers",
     address: {
